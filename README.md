@@ -33,3 +33,10 @@ Etapas:
 * [Materialize](https://materializecss.com/)
 * [Tailwind CSS](https://tailwindcss.com/)
 * [Curso de Bootstrap](https://www.youtube.com/watch?v=ZpDY6ouoD-g)
+
+## Alternativas ao ReactJS
+* [VueJS](https://vuejs.org/)
+
+## CORS
+* [O que é CORS?](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CORS)
+* [CORS Middleaware para Express](https://expressjs.com/en/resources/middleware/cors.html)
