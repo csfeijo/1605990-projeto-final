@@ -30,9 +30,10 @@ Etapas:
 
 ## Links úteis
 * [Bootstrap](https://getbootstrap.com/)
+* [Plugin Chrome Bootstrap Grid](https://chrome.google.com/webstore/detail/bootstrap-grid-overlay/mnlklmelflkheijccafopdohgclfefcg)
 * [Materialize](https://materializecss.com/)
 * [Tailwind CSS](https://tailwindcss.com/)
-* [Curso de Bootstrap](https://www.youtube.com/watch?v=ZpDY6ouoD-g)
+* [Curso de Bootstrap](https://www.youtube.com/watch?v=u5vQXAlDmRo&list=PLtZIOdazLJQgQMM8Ori4IFmUGNRCHBd-m)
 
 ## Alternativas ao ReactJS
 * [VueJS](https://vuejs.org/)
