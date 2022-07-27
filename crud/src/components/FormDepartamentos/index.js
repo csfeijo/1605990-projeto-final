@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { insertDepartamento } from '../../services/departamentos';
 
 const FormDepartamentos = () => {
   const [nome, setNome] = useState('');
   const [sigla, setSigla] = useState('');
+  const [showErro, setShowErro] = useState('d-none');
+  const [erro, setErro] = useState('');
 
+  const navigate = useNavigate();
 
   return (
     <>
@@ -36,6 +41,9 @@ const FormDepartamentos = () => {
               id='sigla'
               placeholder='Sigla'
               value={sigla}
+              onChange={e => {
+                setSigla(e.target.value)
+              }}
             />
             <label htmlFor='sigla'>Sigla</label>
           </div>
@@ -48,15 +56,35 @@ const FormDepartamentos = () => {
           <button 
             className='btn btn-primary mt-3'
             onClick={() => {
-              alert('Clicou')
+              setShowErro('d-none');
+
+              if (nome == '') {
+                setShowErro('d-block');
+                setErro('Preencha o nome!');
+                return;
+              }
+
+              if (sigla == '') {
+                setShowErro('d-block');
+                setErro('Preencha a sigla!');
+                return;
+              }
+              // aqui vamos chamar nossa API!
+              insertDepartamento({
+                nome,
+                sigla
+              });
+
+              navigate('/departamentos');
+
             }}>
             <i className='bi bi-save' /> Salvar
           </button>
         </div>
       </div>
-      {/* só para testar! */}
-      {nome}
-      {sigla}
+      <div className={`alert alert-danger mt-3 ${showErro}`}>
+        {erro}
+      </div>
     </>
   )
 }
