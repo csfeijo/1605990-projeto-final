@@ -1,17 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { getDepartamentos } from '../../services/departamentos';
+import { 
+  getDepartamentos, 
+  removeDepartamento 
+} from '../../services/departamentos';
 
 const ListaDepartamentos = () => {
   const [departamentos, setDepartamentos] = useState();
+  const [excluindo, setExcluindo] = useState();
 
   async function loadDepartamentos() {
     setDepartamentos(await getDepartamentos());
   }
 
   useEffect(() => {
-    loadDepartamentos()
+    loadDepartamentos();
   }, [])
+
+  useEffect(() => {
+    setExcluindo(false);
+  }, [departamentos])
 
   return (
     <>
@@ -56,8 +64,36 @@ const ListaDepartamentos = () => {
                     <button className='btn btn-outline-warning btn-sm'>
                       <i className='bi bi-pencil-fill'/> Editar
                     </button>
-                    <button className='btn btn-outline-danger btn-sm'>
-                      <i className="bi bi-trash3-fill"/> Excluir
+                    <button 
+                      className='btn btn-outline-danger btn-sm'
+                      disabled={excluindo}
+                      onClick={() => {
+                        
+                        setExcluindo(true);
+
+                        removeDepartamento({
+                          idDepartamento: d.id_departamento,
+                          callback: (resposta) => {
+                            loadDepartamentos()
+
+                            if (resposta == '') {
+                              alert('Nao foi possivel excluir')
+                            }
+                          }
+                        })
+                        
+                      }}
+                    >
+                      {excluindo &&
+                        <span className='spinner-border spinner-border-sm' /> 
+                      }
+                      
+                      {!excluindo &&
+                        <i className="bi bi-trash3-fill"/> 
+                      }
+                      
+                      {' '} Excluir
+
                     </button>
                   </div>
 

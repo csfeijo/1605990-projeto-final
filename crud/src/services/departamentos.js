@@ -15,3 +15,12 @@ export const insertDepartamento = async (data) => {
 
   return resp.data;
 }
+
+export const removeDepartamento = async (data) => {
+  const { idDepartamento, callback } = data;
+  const resp = await api.delete(`/departamentos/${idDepartamento}`);
+
+  callback(resp.data);
+
+  return resp.data;
+}

@@ -34,6 +34,8 @@ Etapas:
 * [Materialize](https://materializecss.com/)
 * [Tailwind CSS](https://tailwindcss.com/)
 * [Curso de Bootstrap](https://www.youtube.com/watch?v=u5vQXAlDmRo&list=PLtZIOdazLJQgQMM8Ori4IFmUGNRCHBd-m)
+* [O que é a Lottie do AirBnB](https://lottiefiles.com/what-is-lottie)
+* [Biblioteca de animações Lottie](https://lottiefiles.com/)
 
 ## Alternativas ao ReactJS
 * [VueJS](https://vuejs.org/)
@@ -41,3 +43,7 @@ Etapas:
 ## CORS
 * [O que é CORS?](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CORS)
 * [CORS Middleaware para Express](https://expressjs.com/en/resources/middleware/cors.html)
+
+## JavaScript - Validações
+* [YUP](https://github.com/jquense/yup)
+* [Vídeo de uso do YUP](https://www.youtube.com/watch?v=Pj3jyYLpsZU)

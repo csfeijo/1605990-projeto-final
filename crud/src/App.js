@@ -18,6 +18,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/departamentos' element={<ListaDepartamentos />} />
             <Route path='/departamentos/new' element={ <FormDepartamentos/> } />
+            <Route path='/departamentos/edit/:idDepartamento' element={ <FormDepartamentos/> } />
           </Routes>
         </div>
       </BrowserRouter>
