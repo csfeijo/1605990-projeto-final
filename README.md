@@ -47,3 +47,9 @@ Etapas:
 ## JavaScript - Validações
 * [YUP](https://github.com/jquense/yup)
 * [Vídeo de uso do YUP](https://www.youtube.com/watch?v=Pj3jyYLpsZU)
+
+## Canais e Ferramentas
+* [Rafaella Ballerini](https://www.youtube.com/c/rafaellaballerini)
+* [Como usar o Anki](https://www.youtube.com/watch?v=RsUSdnOit28)
+* [Anki](https://apps.ankiweb.net/)
+* [Notion SO](https://www.notion.so/)
